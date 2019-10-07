@@ -1,6 +1,7 @@
 import math
 import matplotlib.pyplot as plt
 
+from config import Config
 
 FIGURE_CONFIG = dict(
     figsize=(6, 6),
@@ -40,7 +41,8 @@ def visualize_dataset(dataset):
         add_image_to_subplot(ax, image, target)
 
     # Show the plot
-    plt.show()
+    if Config.DISPLAY_PLOT:
+        plt.show()
 
 
 def configure_pyplot_figure(**subplot_config):
